@@ -128,7 +128,7 @@ public class DoctorServiceTests
 
     }
     [Fact]
-    public void Get_gets_count_of_doctors()
+    public void Get_gets_count_of_doctors_properly()
     {
         var dto = new AddDoctorDto
         {
@@ -160,31 +160,37 @@ public class DoctorServiceTests
 
     }
     [Fact]
-    public void Get_gets_information_of_doctors()
+    public void Get_gets_information_of_doctors_properly()
     {
+      
+      
         var dto = new AddDoctorDto
         {
-            FirstName = "reza",
-            LastName = "sharifi",
-            Field = "public",
-            NationalCode = "3545345003"
-
+            FirstName = "mehdi",
+            LastName = "ahmadi",
+            Field = "heart",
+            NationalCode = "1234"
         };
+       
         var db = new EFInMemoryDatabase();
         var context = db.CreateDataContext<EFDataContext>();
         var readContext = db.CreateDataContext<EFDataContext>();
         var sut = new DoctorAppService(new EFDoctorRepository(context), new EFUnitOfWork(context));
+        
 
-        _ = sut.Add(dto);
+        
+        sut.Add(dto);
 
-        var actual = readContext.Doctors.Single();
-        actual.FirstName.Equals("reza");
-        actual.LastName.Equals("sharifi");
-        actual.Field.Equals("public");
-        actual.NationalCode.Equals("3545345003");
+
+        var actual = readContext.Doctors.First();
+        actual.FirstName.Equals(dto.FirstName);
+        actual.LastName.Equals(dto.LastName);
+        actual.Field.Equals(dto.Field);
+        actual.NationalCode.Equals(dto.NationalCode);
+        
     }
     [Fact]
-    public void Delete_delete_doctor_from_table_doctors()
+    public void Delete_delete_doctor_from_table_doctors_properly()
     {
         var db = new EFInMemoryDatabase();
         var context = db.CreateDataContext<EFDataContext>();
