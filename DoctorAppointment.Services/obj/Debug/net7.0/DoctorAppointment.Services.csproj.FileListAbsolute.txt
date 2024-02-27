@@ -1,0 +1,17 @@
+C:\Users\StockRayaneGostar\source\repos\DoctorAppoitment2\DoctorAppointment.Services\bin\Debug\net7.0\DoctorAppointment.Services.deps.json
+C:\Users\StockRayaneGostar\source\repos\DoctorAppoitment2\DoctorAppointment.Services\bin\Debug\net7.0\DoctorAppointment.Services.dll
+C:\Users\StockRayaneGostar\source\repos\DoctorAppoitment2\DoctorAppointment.Services\bin\Debug\net7.0\DoctorAppointment.Services.pdb
+C:\Users\StockRayaneGostar\source\repos\DoctorAppoitment2\DoctorAppointment.Services\bin\Debug\net7.0\DoctorAppointment.Contracts.dll
+C:\Users\StockRayaneGostar\source\repos\DoctorAppoitment2\DoctorAppointment.Services\bin\Debug\net7.0\DoctorAppointment.Entities.dll
+C:\Users\StockRayaneGostar\source\repos\DoctorAppoitment2\DoctorAppointment.Services\bin\Debug\net7.0\DoctorAppointment.Contracts.pdb
+C:\Users\StockRayaneGostar\source\repos\DoctorAppoitment2\DoctorAppointment.Services\bin\Debug\net7.0\DoctorAppointment.Entities.pdb
+C:\Users\StockRayaneGostar\source\repos\DoctorAppoitment2\DoctorAppointment.Services\obj\Debug\net7.0\DoctorAppointment.Services.csproj.AssemblyReference.cache
+C:\Users\StockRayaneGostar\source\repos\DoctorAppoitment2\DoctorAppointment.Services\obj\Debug\net7.0\DoctorAppointment.Services.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\StockRayaneGostar\source\repos\DoctorAppoitment2\DoctorAppointment.Services\obj\Debug\net7.0\DoctorAppointment.Services.AssemblyInfoInputs.cache
+C:\Users\StockRayaneGostar\source\repos\DoctorAppoitment2\DoctorAppointment.Services\obj\Debug\net7.0\DoctorAppointment.Services.AssemblyInfo.cs
+C:\Users\StockRayaneGostar\source\repos\DoctorAppoitment2\DoctorAppointment.Services\obj\Debug\net7.0\DoctorAppointment.Services.csproj.CoreCompileInputs.cache
+C:\Users\StockRayaneGostar\source\repos\DoctorAppoitment2\DoctorAppointment.Services\obj\Debug\net7.0\DoctorAppointment.Services.csproj.CopyComplete
+C:\Users\StockRayaneGostar\source\repos\DoctorAppoitment2\DoctorAppointment.Services\obj\Debug\net7.0\DoctorAppointment.Services.dll
+C:\Users\StockRayaneGostar\source\repos\DoctorAppoitment2\DoctorAppointment.Services\obj\Debug\net7.0\refint\DoctorAppointment.Services.dll
+C:\Users\StockRayaneGostar\source\repos\DoctorAppoitment2\DoctorAppointment.Services\obj\Debug\net7.0\DoctorAppointment.Services.pdb
+C:\Users\StockRayaneGostar\source\repos\DoctorAppoitment2\DoctorAppointment.Services\obj\Debug\net7.0\ref\DoctorAppointment.Services.dll
