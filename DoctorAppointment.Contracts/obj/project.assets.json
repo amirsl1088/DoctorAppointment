@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\StockRayaneGostar\\source\\repos\\DoctorAppoitment2\\DoctorAppointment.Contracts\\DoctorAppointment.Contracts.csproj",
+      "projectUniqueName": "C:\\dataaaa\\DoctorAppointment\\DoctorAppointment.Contracts\\DoctorAppointment.Contracts.csproj",
       "projectName": "DoctorAppointment.Contracts",
-      "projectPath": "C:\\Users\\StockRayaneGostar\\source\\repos\\DoctorAppoitment2\\DoctorAppointment.Contracts\\DoctorAppointment.Contracts.csproj",
+      "projectPath": "C:\\dataaaa\\DoctorAppointment\\DoctorAppointment.Contracts\\DoctorAppointment.Contracts.csproj",
       "packagesPath": "C:\\Users\\StockRayaneGostar\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\StockRayaneGostar\\source\\repos\\DoctorAppoitment2\\DoctorAppointment.Contracts\\obj\\",
+      "outputPath": "C:\\dataaaa\\DoctorAppointment\\DoctorAppointment.Contracts\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\StockRayaneGostar\\AppData\\Roaming\\NuGet\\NuGet.Config",

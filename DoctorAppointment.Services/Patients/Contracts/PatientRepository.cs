@@ -1,5 +1,6 @@
 ﻿using DoctorAppointment.Entities.Doctors;
 using DoctorAppointment.Entities.Patients;
+using DoctorAppointment.Services.Patients.Contracts.Dto;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,7 +15,7 @@ namespace DoctorAppointment.Services.Patients.Contracts
         bool IsExistNationalCode(string nationalcode);
         Task<Patient?> FindById(int id);
         void Update();
-        List<Patient> GetPatients();
+        List<GetPatientDto> GetPatients();
         void Delete(Patient patient);
 
 

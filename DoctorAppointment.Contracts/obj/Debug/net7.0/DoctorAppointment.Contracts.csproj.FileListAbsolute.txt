@@ -10,3 +10,15 @@ C:\Users\StockRayaneGostar\source\repos\DoctorAppoitment2\DoctorAppointment.Cont
 C:\Users\StockRayaneGostar\source\repos\DoctorAppoitment2\DoctorAppointment.Contracts\obj\Debug\net7.0\refint\DoctorAppointment.Contracts.dll
 C:\Users\StockRayaneGostar\source\repos\DoctorAppoitment2\DoctorAppointment.Contracts\obj\Debug\net7.0\DoctorAppointment.Contracts.pdb
 C:\Users\StockRayaneGostar\source\repos\DoctorAppoitment2\DoctorAppointment.Contracts\obj\Debug\net7.0\ref\DoctorAppointment.Contracts.dll
+C:\dataaaa\DoctorAppointment\DoctorAppointment.Contracts\bin\Debug\net7.0\DoctorAppointment.Contracts.deps.json
+C:\dataaaa\DoctorAppointment\DoctorAppointment.Contracts\bin\Debug\net7.0\DoctorAppointment.Contracts.dll
+C:\dataaaa\DoctorAppointment\DoctorAppointment.Contracts\bin\Debug\net7.0\DoctorAppointment.Contracts.pdb
+C:\dataaaa\DoctorAppointment\DoctorAppointment.Contracts\obj\Debug\net7.0\DoctorAppointment.Contracts.csproj.AssemblyReference.cache
+C:\dataaaa\DoctorAppointment\DoctorAppointment.Contracts\obj\Debug\net7.0\DoctorAppointment.Contracts.GeneratedMSBuildEditorConfig.editorconfig
+C:\dataaaa\DoctorAppointment\DoctorAppointment.Contracts\obj\Debug\net7.0\DoctorAppointment.Contracts.AssemblyInfoInputs.cache
+C:\dataaaa\DoctorAppointment\DoctorAppointment.Contracts\obj\Debug\net7.0\DoctorAppointment.Contracts.AssemblyInfo.cs
+C:\dataaaa\DoctorAppointment\DoctorAppointment.Contracts\obj\Debug\net7.0\DoctorAppointment.Contracts.csproj.CoreCompileInputs.cache
+C:\dataaaa\DoctorAppointment\DoctorAppointment.Contracts\obj\Debug\net7.0\DoctorAppointment.Contracts.dll
+C:\dataaaa\DoctorAppointment\DoctorAppointment.Contracts\obj\Debug\net7.0\refint\DoctorAppointment.Contracts.dll
+C:\dataaaa\DoctorAppointment\DoctorAppointment.Contracts\obj\Debug\net7.0\DoctorAppointment.Contracts.pdb
+C:\dataaaa\DoctorAppointment\DoctorAppointment.Contracts\obj\Debug\net7.0\ref\DoctorAppointment.Contracts.dll

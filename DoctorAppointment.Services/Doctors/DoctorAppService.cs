@@ -49,17 +49,11 @@ public class DoctorAppService : DoctorService
         await _unitOfWork.Complete();
     }
 
-    public List<GetDoctorDto> GetDoctors(GetDoctorDto dto)
+    public List<GetDoctorDto> GetDoctors()
     {
-        var doctors = _repository.GetDoctors().Select(_ => new GetDoctorDto
-        {
-            Id = _.Id,
-            FirstName = _.FirstName,
-            LastName = _.LastName,
-            Field = _.Field,
-            NationalCode = _.NationalCode
-        });
-        return (List<GetDoctorDto>)doctors;
+        var doctors = _repository.GetDoctors();
+        
+        return doctors;
     }
 
     public async Task Update(int id, UpdateDoctorDto dto)

@@ -1,6 +1,7 @@
 using DoctorAppointment.Entities.Doctors;
 using DoctorAppointment.Persistence.EF;
 using DoctorAppointment.Services.Doctors.Contracts;
+using DoctorAppointment.Services.Doctors.Contracts.Dto;
 using Microsoft.EntityFrameworkCore;
 
 namespace DoctorAppointment.Persistence.EF.Doctors;
@@ -29,9 +30,16 @@ public class EFDoctorRepository : DoctorRepository
         return await _context.Doctors.FirstOrDefaultAsync(_ => _.Id == id);
     }
 
-    public List<Doctor> GetDoctors()
+    public List<GetDoctorDto> GetDoctors()
     {
-        return _context.Doctors.ToList();
+        return _context.Doctors.Select(_ => new GetDoctorDto
+        {
+            Id = _.Id,
+            FirstName = _.FirstName,
+            LastName = _.LastName,
+            Field = _.Field,
+            NationalCode = _.NationalCode
+        }).ToList();
     }
 
     public bool IsExistNationalCode(string nationalcode)

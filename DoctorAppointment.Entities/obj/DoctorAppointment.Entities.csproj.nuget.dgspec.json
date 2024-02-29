@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\StockRayaneGostar\\source\\repos\\DoctorAppoitment2\\DoctorAppointment.Entities\\DoctorAppointment.Entities.csproj": {}
+    "C:\\dataaaa\\DoctorAppointment\\DoctorAppointment.Entities\\DoctorAppointment.Entities.csproj": {}
   },
   "projects": {
-    "C:\\Users\\StockRayaneGostar\\source\\repos\\DoctorAppoitment2\\DoctorAppointment.Entities\\DoctorAppointment.Entities.csproj": {
+    "C:\\dataaaa\\DoctorAppointment\\DoctorAppointment.Entities\\DoctorAppointment.Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\StockRayaneGostar\\source\\repos\\DoctorAppoitment2\\DoctorAppointment.Entities\\DoctorAppointment.Entities.csproj",
+        "projectUniqueName": "C:\\dataaaa\\DoctorAppointment\\DoctorAppointment.Entities\\DoctorAppointment.Entities.csproj",
         "projectName": "DoctorAppointment.Entities",
-        "projectPath": "C:\\Users\\StockRayaneGostar\\source\\repos\\DoctorAppoitment2\\DoctorAppointment.Entities\\DoctorAppointment.Entities.csproj",
+        "projectPath": "C:\\dataaaa\\DoctorAppointment\\DoctorAppointment.Entities\\DoctorAppointment.Entities.csproj",
         "packagesPath": "C:\\Users\\StockRayaneGostar\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\StockRayaneGostar\\source\\repos\\DoctorAppoitment2\\DoctorAppointment.Entities\\obj\\",
+        "outputPath": "C:\\dataaaa\\DoctorAppointment\\DoctorAppointment.Entities\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\StockRayaneGostar\\AppData\\Roaming\\NuGet\\NuGet.Config",

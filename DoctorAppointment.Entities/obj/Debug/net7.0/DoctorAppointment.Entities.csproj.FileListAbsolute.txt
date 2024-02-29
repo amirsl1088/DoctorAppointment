@@ -10,3 +10,15 @@ C:\Users\StockRayaneGostar\source\repos\DoctorAppoitment2\DoctorAppointment.Enti
 C:\Users\StockRayaneGostar\source\repos\DoctorAppoitment2\DoctorAppointment.Entities\obj\Debug\net7.0\refint\DoctorAppointment.Entities.dll
 C:\Users\StockRayaneGostar\source\repos\DoctorAppoitment2\DoctorAppointment.Entities\obj\Debug\net7.0\DoctorAppointment.Entities.pdb
 C:\Users\StockRayaneGostar\source\repos\DoctorAppoitment2\DoctorAppointment.Entities\obj\Debug\net7.0\ref\DoctorAppointment.Entities.dll
+C:\dataaaa\DoctorAppointment\DoctorAppointment.Entities\bin\Debug\net7.0\DoctorAppointment.Entities.deps.json
+C:\dataaaa\DoctorAppointment\DoctorAppointment.Entities\bin\Debug\net7.0\DoctorAppointment.Entities.dll
+C:\dataaaa\DoctorAppointment\DoctorAppointment.Entities\bin\Debug\net7.0\DoctorAppointment.Entities.pdb
+C:\dataaaa\DoctorAppointment\DoctorAppointment.Entities\obj\Debug\net7.0\DoctorAppointment.Entities.csproj.AssemblyReference.cache
+C:\dataaaa\DoctorAppointment\DoctorAppointment.Entities\obj\Debug\net7.0\DoctorAppointment.Entities.GeneratedMSBuildEditorConfig.editorconfig
+C:\dataaaa\DoctorAppointment\DoctorAppointment.Entities\obj\Debug\net7.0\DoctorAppointment.Entities.AssemblyInfoInputs.cache
+C:\dataaaa\DoctorAppointment\DoctorAppointment.Entities\obj\Debug\net7.0\DoctorAppointment.Entities.AssemblyInfo.cs
+C:\dataaaa\DoctorAppointment\DoctorAppointment.Entities\obj\Debug\net7.0\DoctorAppointment.Entities.csproj.CoreCompileInputs.cache
+C:\dataaaa\DoctorAppointment\DoctorAppointment.Entities\obj\Debug\net7.0\DoctorAppointment.Entities.dll
+C:\dataaaa\DoctorAppointment\DoctorAppointment.Entities\obj\Debug\net7.0\refint\DoctorAppointment.Entities.dll
+C:\dataaaa\DoctorAppointment\DoctorAppointment.Entities\obj\Debug\net7.0\DoctorAppointment.Entities.pdb
+C:\dataaaa\DoctorAppointment\DoctorAppointment.Entities\obj\Debug\net7.0\ref\DoctorAppointment.Entities.dll

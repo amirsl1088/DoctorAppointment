@@ -11,7 +11,7 @@ namespace DoctorAppointment.Services.Patients.Contracts
     {
         Task Add(AddPatientDto dto);
         Task Update(int id, UpdatePatientDto dto);
-        List<GetPatientDto> GetPatients(GetPatientDto dto);
+        List<GetPatientDto> GetPatients();
         Task Delete(int id);
     }
 }

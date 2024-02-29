@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\StockRayaneGostar\\source\\repos\\DoctorAppoitment2\\DoctorAppointment.Services.Unit.Tests\\DoctorAppointment.Services.Unit.Tests.csproj": {}
+    "C:\\dataaaa\\DoctorAppointment\\DoctorAppointment.Services.Unit.Tests\\DoctorAppointment.Services.Unit.Tests.csproj": {}
   },
   "projects": {
-    "C:\\Users\\StockRayaneGostar\\source\\repos\\DoctorAppoitment2\\DoctorAppointment.Contracts\\DoctorAppointment.Contracts.csproj": {
+    "C:\\dataaaa\\DoctorAppointment\\DoctorAppointment.Contracts\\DoctorAppointment.Contracts.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\StockRayaneGostar\\source\\repos\\DoctorAppoitment2\\DoctorAppointment.Contracts\\DoctorAppointment.Contracts.csproj",
+        "projectUniqueName": "C:\\dataaaa\\DoctorAppointment\\DoctorAppointment.Contracts\\DoctorAppointment.Contracts.csproj",
         "projectName": "DoctorAppointment.Contracts",
-        "projectPath": "C:\\Users\\StockRayaneGostar\\source\\repos\\DoctorAppoitment2\\DoctorAppointment.Contracts\\DoctorAppointment.Contracts.csproj",
+        "projectPath": "C:\\dataaaa\\DoctorAppointment\\DoctorAppointment.Contracts\\DoctorAppointment.Contracts.csproj",
         "packagesPath": "C:\\Users\\StockRayaneGostar\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\StockRayaneGostar\\source\\repos\\DoctorAppoitment2\\DoctorAppointment.Contracts\\obj\\",
+        "outputPath": "C:\\dataaaa\\DoctorAppointment\\DoctorAppointment.Contracts\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\StockRayaneGostar\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -59,14 +59,14 @@
         }
       }
     },
-    "C:\\Users\\StockRayaneGostar\\source\\repos\\DoctorAppoitment2\\DoctorAppointment.Entities\\DoctorAppointment.Entities.csproj": {
+    "C:\\dataaaa\\DoctorAppointment\\DoctorAppointment.Entities\\DoctorAppointment.Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\StockRayaneGostar\\source\\repos\\DoctorAppoitment2\\DoctorAppointment.Entities\\DoctorAppointment.Entities.csproj",
+        "projectUniqueName": "C:\\dataaaa\\DoctorAppointment\\DoctorAppointment.Entities\\DoctorAppointment.Entities.csproj",
         "projectName": "DoctorAppointment.Entities",
-        "projectPath": "C:\\Users\\StockRayaneGostar\\source\\repos\\DoctorAppoitment2\\DoctorAppointment.Entities\\DoctorAppointment.Entities.csproj",
+        "projectPath": "C:\\dataaaa\\DoctorAppointment\\DoctorAppointment.Entities\\DoctorAppointment.Entities.csproj",
         "packagesPath": "C:\\Users\\StockRayaneGostar\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\StockRayaneGostar\\source\\repos\\DoctorAppoitment2\\DoctorAppointment.Entities\\obj\\",
+        "outputPath": "C:\\dataaaa\\DoctorAppointment\\DoctorAppointment.Entities\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\StockRayaneGostar\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -114,14 +114,14 @@
         }
       }
     },
-    "C:\\Users\\StockRayaneGostar\\source\\repos\\DoctorAppoitment2\\DoctorAppointment.Persistence.EF\\DoctorAppointment.Persistence.EF.csproj": {
+    "C:\\dataaaa\\DoctorAppointment\\DoctorAppointment.Persistence.EF\\DoctorAppointment.Persistence.EF.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\StockRayaneGostar\\source\\repos\\DoctorAppoitment2\\DoctorAppointment.Persistence.EF\\DoctorAppointment.Persistence.EF.csproj",
+        "projectUniqueName": "C:\\dataaaa\\DoctorAppointment\\DoctorAppointment.Persistence.EF\\DoctorAppointment.Persistence.EF.csproj",
         "projectName": "DoctorAppointment.Persistence.EF",
-        "projectPath": "C:\\Users\\StockRayaneGostar\\source\\repos\\DoctorAppoitment2\\DoctorAppointment.Persistence.EF\\DoctorAppointment.Persistence.EF.csproj",
+        "projectPath": "C:\\dataaaa\\DoctorAppointment\\DoctorAppointment.Persistence.EF\\DoctorAppointment.Persistence.EF.csproj",
         "packagesPath": "C:\\Users\\StockRayaneGostar\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\StockRayaneGostar\\source\\repos\\DoctorAppoitment2\\DoctorAppointment.Persistence.EF\\obj\\",
+        "outputPath": "C:\\dataaaa\\DoctorAppointment\\DoctorAppointment.Persistence.EF\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\StockRayaneGostar\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -138,14 +138,14 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\StockRayaneGostar\\source\\repos\\DoctorAppoitment2\\DoctorAppointment.Contracts\\DoctorAppointment.Contracts.csproj": {
-                "projectPath": "C:\\Users\\StockRayaneGostar\\source\\repos\\DoctorAppoitment2\\DoctorAppointment.Contracts\\DoctorAppointment.Contracts.csproj"
+              "C:\\dataaaa\\DoctorAppointment\\DoctorAppointment.Contracts\\DoctorAppointment.Contracts.csproj": {
+                "projectPath": "C:\\dataaaa\\DoctorAppointment\\DoctorAppointment.Contracts\\DoctorAppointment.Contracts.csproj"
               },
-              "C:\\Users\\StockRayaneGostar\\source\\repos\\DoctorAppoitment2\\DoctorAppointment.Entities\\DoctorAppointment.Entities.csproj": {
-                "projectPath": "C:\\Users\\StockRayaneGostar\\source\\repos\\DoctorAppoitment2\\DoctorAppointment.Entities\\DoctorAppointment.Entities.csproj"
+              "C:\\dataaaa\\DoctorAppointment\\DoctorAppointment.Entities\\DoctorAppointment.Entities.csproj": {
+                "projectPath": "C:\\dataaaa\\DoctorAppointment\\DoctorAppointment.Entities\\DoctorAppointment.Entities.csproj"
               },
-              "C:\\Users\\StockRayaneGostar\\source\\repos\\DoctorAppoitment2\\DoctorAppointment.Services\\DoctorAppointment.Services.csproj": {
-                "projectPath": "C:\\Users\\StockRayaneGostar\\source\\repos\\DoctorAppoitment2\\DoctorAppointment.Services\\DoctorAppointment.Services.csproj"
+              "C:\\dataaaa\\DoctorAppointment\\DoctorAppointment.Services\\DoctorAppointment.Services.csproj": {
+                "projectPath": "C:\\dataaaa\\DoctorAppointment\\DoctorAppointment.Services\\DoctorAppointment.Services.csproj"
               }
             }
           }
@@ -189,14 +189,14 @@
         }
       }
     },
-    "C:\\Users\\StockRayaneGostar\\source\\repos\\DoctorAppoitment2\\DoctorAppointment.Services.Unit.Tests\\DoctorAppointment.Services.Unit.Tests.csproj": {
+    "C:\\dataaaa\\DoctorAppointment\\DoctorAppointment.Services.Unit.Tests\\DoctorAppointment.Services.Unit.Tests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\StockRayaneGostar\\source\\repos\\DoctorAppoitment2\\DoctorAppointment.Services.Unit.Tests\\DoctorAppointment.Services.Unit.Tests.csproj",
+        "projectUniqueName": "C:\\dataaaa\\DoctorAppointment\\DoctorAppointment.Services.Unit.Tests\\DoctorAppointment.Services.Unit.Tests.csproj",
         "projectName": "DoctorAppointment.Services.Unit.Tests",
-        "projectPath": "C:\\Users\\StockRayaneGostar\\source\\repos\\DoctorAppoitment2\\DoctorAppointment.Services.Unit.Tests\\DoctorAppointment.Services.Unit.Tests.csproj",
+        "projectPath": "C:\\dataaaa\\DoctorAppointment\\DoctorAppointment.Services.Unit.Tests\\DoctorAppointment.Services.Unit.Tests.csproj",
         "packagesPath": "C:\\Users\\StockRayaneGostar\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\StockRayaneGostar\\source\\repos\\DoctorAppoitment2\\DoctorAppointment.Services.Unit.Tests\\obj\\",
+        "outputPath": "C:\\dataaaa\\DoctorAppointment\\DoctorAppointment.Services.Unit.Tests\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\StockRayaneGostar\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -213,20 +213,20 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\StockRayaneGostar\\source\\repos\\DoctorAppoitment2\\DoctorAppointment.Contracts\\DoctorAppointment.Contracts.csproj": {
-                "projectPath": "C:\\Users\\StockRayaneGostar\\source\\repos\\DoctorAppoitment2\\DoctorAppointment.Contracts\\DoctorAppointment.Contracts.csproj"
+              "C:\\dataaaa\\DoctorAppointment\\DoctorAppointment.Contracts\\DoctorAppointment.Contracts.csproj": {
+                "projectPath": "C:\\dataaaa\\DoctorAppointment\\DoctorAppointment.Contracts\\DoctorAppointment.Contracts.csproj"
               },
-              "C:\\Users\\StockRayaneGostar\\source\\repos\\DoctorAppoitment2\\DoctorAppointment.Entities\\DoctorAppointment.Entities.csproj": {
-                "projectPath": "C:\\Users\\StockRayaneGostar\\source\\repos\\DoctorAppoitment2\\DoctorAppointment.Entities\\DoctorAppointment.Entities.csproj"
+              "C:\\dataaaa\\DoctorAppointment\\DoctorAppointment.Entities\\DoctorAppointment.Entities.csproj": {
+                "projectPath": "C:\\dataaaa\\DoctorAppointment\\DoctorAppointment.Entities\\DoctorAppointment.Entities.csproj"
               },
-              "C:\\Users\\StockRayaneGostar\\source\\repos\\DoctorAppoitment2\\DoctorAppointment.Persistence.EF\\DoctorAppointment.Persistence.EF.csproj": {
-                "projectPath": "C:\\Users\\StockRayaneGostar\\source\\repos\\DoctorAppoitment2\\DoctorAppointment.Persistence.EF\\DoctorAppointment.Persistence.EF.csproj"
+              "C:\\dataaaa\\DoctorAppointment\\DoctorAppointment.Persistence.EF\\DoctorAppointment.Persistence.EF.csproj": {
+                "projectPath": "C:\\dataaaa\\DoctorAppointment\\DoctorAppointment.Persistence.EF\\DoctorAppointment.Persistence.EF.csproj"
               },
-              "C:\\Users\\StockRayaneGostar\\source\\repos\\DoctorAppoitment2\\DoctorAppointment.Services\\DoctorAppointment.Services.csproj": {
-                "projectPath": "C:\\Users\\StockRayaneGostar\\source\\repos\\DoctorAppoitment2\\DoctorAppointment.Services\\DoctorAppointment.Services.csproj"
+              "C:\\dataaaa\\DoctorAppointment\\DoctorAppointment.Services\\DoctorAppointment.Services.csproj": {
+                "projectPath": "C:\\dataaaa\\DoctorAppointment\\DoctorAppointment.Services\\DoctorAppointment.Services.csproj"
               },
-              "C:\\Users\\StockRayaneGostar\\source\\repos\\DoctorAppoitment2\\DoctorAppointment.Test.Tools\\DoctorAppointment.Test.Tools.csproj": {
-                "projectPath": "C:\\Users\\StockRayaneGostar\\source\\repos\\DoctorAppoitment2\\DoctorAppointment.Test.Tools\\DoctorAppointment.Test.Tools.csproj"
+              "C:\\dataaaa\\DoctorAppointment\\DoctorAppointment.Test.Tools\\DoctorAppointment.Test.Tools.csproj": {
+                "projectPath": "C:\\dataaaa\\DoctorAppointment\\DoctorAppointment.Test.Tools\\DoctorAppointment.Test.Tools.csproj"
               }
             }
           }
@@ -286,14 +286,14 @@
         }
       }
     },
-    "C:\\Users\\StockRayaneGostar\\source\\repos\\DoctorAppoitment2\\DoctorAppointment.Services\\DoctorAppointment.Services.csproj": {
+    "C:\\dataaaa\\DoctorAppointment\\DoctorAppointment.Services\\DoctorAppointment.Services.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\StockRayaneGostar\\source\\repos\\DoctorAppoitment2\\DoctorAppointment.Services\\DoctorAppointment.Services.csproj",
+        "projectUniqueName": "C:\\dataaaa\\DoctorAppointment\\DoctorAppointment.Services\\DoctorAppointment.Services.csproj",
         "projectName": "DoctorAppointment.Services",
-        "projectPath": "C:\\Users\\StockRayaneGostar\\source\\repos\\DoctorAppoitment2\\DoctorAppointment.Services\\DoctorAppointment.Services.csproj",
+        "projectPath": "C:\\dataaaa\\DoctorAppointment\\DoctorAppointment.Services\\DoctorAppointment.Services.csproj",
         "packagesPath": "C:\\Users\\StockRayaneGostar\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\StockRayaneGostar\\source\\repos\\DoctorAppoitment2\\DoctorAppointment.Services\\obj\\",
+        "outputPath": "C:\\dataaaa\\DoctorAppointment\\DoctorAppointment.Services\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\StockRayaneGostar\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -310,11 +310,11 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\StockRayaneGostar\\source\\repos\\DoctorAppoitment2\\DoctorAppointment.Contracts\\DoctorAppointment.Contracts.csproj": {
-                "projectPath": "C:\\Users\\StockRayaneGostar\\source\\repos\\DoctorAppoitment2\\DoctorAppointment.Contracts\\DoctorAppointment.Contracts.csproj"
+              "C:\\dataaaa\\DoctorAppointment\\DoctorAppointment.Contracts\\DoctorAppointment.Contracts.csproj": {
+                "projectPath": "C:\\dataaaa\\DoctorAppointment\\DoctorAppointment.Contracts\\DoctorAppointment.Contracts.csproj"
               },
-              "C:\\Users\\StockRayaneGostar\\source\\repos\\DoctorAppoitment2\\DoctorAppointment.Entities\\DoctorAppointment.Entities.csproj": {
-                "projectPath": "C:\\Users\\StockRayaneGostar\\source\\repos\\DoctorAppoitment2\\DoctorAppointment.Entities\\DoctorAppointment.Entities.csproj"
+              "C:\\dataaaa\\DoctorAppointment\\DoctorAppointment.Entities\\DoctorAppointment.Entities.csproj": {
+                "projectPath": "C:\\dataaaa\\DoctorAppointment\\DoctorAppointment.Entities\\DoctorAppointment.Entities.csproj"
               }
             }
           }
@@ -348,14 +348,14 @@
         }
       }
     },
-    "C:\\Users\\StockRayaneGostar\\source\\repos\\DoctorAppoitment2\\DoctorAppointment.Test.Tools\\DoctorAppointment.Test.Tools.csproj": {
+    "C:\\dataaaa\\DoctorAppointment\\DoctorAppointment.Test.Tools\\DoctorAppointment.Test.Tools.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\StockRayaneGostar\\source\\repos\\DoctorAppoitment2\\DoctorAppointment.Test.Tools\\DoctorAppointment.Test.Tools.csproj",
+        "projectUniqueName": "C:\\dataaaa\\DoctorAppointment\\DoctorAppointment.Test.Tools\\DoctorAppointment.Test.Tools.csproj",
         "projectName": "DoctorAppointment.Test.Tools",
-        "projectPath": "C:\\Users\\StockRayaneGostar\\source\\repos\\DoctorAppoitment2\\DoctorAppointment.Test.Tools\\DoctorAppointment.Test.Tools.csproj",
+        "projectPath": "C:\\dataaaa\\DoctorAppointment\\DoctorAppointment.Test.Tools\\DoctorAppointment.Test.Tools.csproj",
         "packagesPath": "C:\\Users\\StockRayaneGostar\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\StockRayaneGostar\\source\\repos\\DoctorAppoitment2\\DoctorAppointment.Test.Tools\\obj\\",
+        "outputPath": "C:\\dataaaa\\DoctorAppointment\\DoctorAppointment.Test.Tools\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\StockRayaneGostar\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -371,7 +371,14 @@
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\dataaaa\\DoctorAppointment\\DoctorAppointment.Persistence.EF\\DoctorAppointment.Persistence.EF.csproj": {
+                "projectPath": "C:\\dataaaa\\DoctorAppointment\\DoctorAppointment.Persistence.EF\\DoctorAppointment.Persistence.EF.csproj"
+              },
+              "C:\\dataaaa\\DoctorAppointment\\DoctorAppointment.Services\\DoctorAppointment.Services.csproj": {
+                "projectPath": "C:\\dataaaa\\DoctorAppointment\\DoctorAppointment.Services\\DoctorAppointment.Services.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

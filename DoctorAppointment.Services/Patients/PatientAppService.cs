@@ -41,22 +41,16 @@ namespace DoctorAppointment.Services.Patients
             var patient = await _repository.FindById(id);
             if (patient is null)
             {
-                throw new DoctorIdNotFound();
+                throw new PatientNotFound();
             }
             _repository.Delete(patient);
             await _unitOfWork.Complete();
         }
 
-        public List<GetPatientDto> GetPatients(GetPatientDto dto)
+        public List<GetPatientDto> GetPatients()
         {
-            var patients = _repository.GetPatients().Select(_ => new GetPatientDto
-            {
-                Id = _.Id,
-                FirstName = _.FirstName,
-                LastName = _.LastName,
-                NationalCode = _.NationalCode
-            });
-            return (List<GetPatientDto>)patients;
+            var patients = _repository.GetPatients();
+            return patients;
         }
 
         public async Task Update(int id, UpdatePatientDto updatedto)

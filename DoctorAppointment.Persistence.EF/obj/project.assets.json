@@ -2743,11 +2743,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\StockRayaneGostar\\source\\repos\\DoctorAppoitment2\\DoctorAppointment.Persistence.EF\\DoctorAppointment.Persistence.EF.csproj",
+      "projectUniqueName": "C:\\dataaaa\\DoctorAppointment\\DoctorAppointment.Persistence.EF\\DoctorAppointment.Persistence.EF.csproj",
       "projectName": "DoctorAppointment.Persistence.EF",
-      "projectPath": "C:\\Users\\StockRayaneGostar\\source\\repos\\DoctorAppoitment2\\DoctorAppointment.Persistence.EF\\DoctorAppointment.Persistence.EF.csproj",
+      "projectPath": "C:\\dataaaa\\DoctorAppointment\\DoctorAppointment.Persistence.EF\\DoctorAppointment.Persistence.EF.csproj",
       "packagesPath": "C:\\Users\\StockRayaneGostar\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\StockRayaneGostar\\source\\repos\\DoctorAppoitment2\\DoctorAppointment.Persistence.EF\\obj\\",
+      "outputPath": "C:\\dataaaa\\DoctorAppointment\\DoctorAppointment.Persistence.EF\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\StockRayaneGostar\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -2764,14 +2764,14 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\StockRayaneGostar\\source\\repos\\DoctorAppoitment2\\DoctorAppointment.Contracts\\DoctorAppointment.Contracts.csproj": {
-              "projectPath": "C:\\Users\\StockRayaneGostar\\source\\repos\\DoctorAppoitment2\\DoctorAppointment.Contracts\\DoctorAppointment.Contracts.csproj"
+            "C:\\dataaaa\\DoctorAppointment\\DoctorAppointment.Contracts\\DoctorAppointment.Contracts.csproj": {
+              "projectPath": "C:\\dataaaa\\DoctorAppointment\\DoctorAppointment.Contracts\\DoctorAppointment.Contracts.csproj"
             },
-            "C:\\Users\\StockRayaneGostar\\source\\repos\\DoctorAppoitment2\\DoctorAppointment.Entities\\DoctorAppointment.Entities.csproj": {
-              "projectPath": "C:\\Users\\StockRayaneGostar\\source\\repos\\DoctorAppoitment2\\DoctorAppointment.Entities\\DoctorAppointment.Entities.csproj"
+            "C:\\dataaaa\\DoctorAppointment\\DoctorAppointment.Entities\\DoctorAppointment.Entities.csproj": {
+              "projectPath": "C:\\dataaaa\\DoctorAppointment\\DoctorAppointment.Entities\\DoctorAppointment.Entities.csproj"
             },
-            "C:\\Users\\StockRayaneGostar\\source\\repos\\DoctorAppoitment2\\DoctorAppointment.Services\\DoctorAppointment.Services.csproj": {
-              "projectPath": "C:\\Users\\StockRayaneGostar\\source\\repos\\DoctorAppoitment2\\DoctorAppointment.Services\\DoctorAppointment.Services.csproj"
+            "C:\\dataaaa\\DoctorAppointment\\DoctorAppointment.Services\\DoctorAppointment.Services.csproj": {
+              "projectPath": "C:\\dataaaa\\DoctorAppointment\\DoctorAppointment.Services\\DoctorAppointment.Services.csproj"
             }
           }
         }

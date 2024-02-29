@@ -2,8 +2,10 @@ using DoctorAppointment.Entities.Doctors;
 using DoctorAppointment.Persistence.EF;
 using DoctorAppointment.Persistence.EF.Doctors;
 using DoctorAppointment.Services.Doctors;
+using DoctorAppointment.Services.Doctors.Contracts;
 using DoctorAppointment.Services.Doctors.Contracts.Dto;
 using DoctorAppointment.Services.Doctors.Exceptions;
+using DoctorAppointment.Test.Tools.Doctors;
 using DoctorAppointment.Test.Tools.Infrastructure.DatabaseConfig.Unit;
 using FluentAssertions;
 
@@ -11,28 +13,28 @@ namespace DoctorAppointment.Services.Unit.Tests;
 
 public class DoctorServiceTests
 {
+
+    private readonly EFDataContext _context;
+    private readonly EFDataContext _readContext;
+    private readonly DoctorService _sut;
+    public DoctorServiceTests()
+    {
+        var db = new EFInMemoryDatabase();
+        _context = db.CreateDataContext<EFDataContext>();
+        _readContext = db.CreateDataContext<EFDataContext>();
+        _sut = DoctorServiceFactory.Create(_context);
+    }
     [Fact]
     public async Task Add_adds_a_new_doctor_properly()
     {
         //arrange
-        var dto = new AddDoctorDto
-        {
-            FirstName = "dummy-first-name",
-            LastName = "dummy-last-name",
-            Field = "heart",
-            NationalCode = "3545345"
-
-        };
-        var db = new EFInMemoryDatabase();
-        var context = db.CreateDataContext<EFDataContext>();
-        var readContext = db.CreateDataContext<EFDataContext>();
-        var sut = new DoctorAppService(new EFDoctorRepository(context), new EFUnitOfWork(context));
+        var dto = AddDoctorDtoFactory.Create("wegfwg");
 
         //act
-        await sut.Add(dto);
+        await _sut.Add(dto);
 
         //assert
-        var actual = readContext.Doctors.Single();
+        var actual = _readContext.Doctors.Single();
         actual.FirstName.Should().Be(dto.FirstName);
         actual.LastName.Should().Be(dto.LastName);
         actual.Field.Should().Be(dto.Field);
@@ -42,20 +44,10 @@ public class DoctorServiceTests
     [Fact]
     public async Task Update_updates_doctor_properly()
     {
-        var db = new EFInMemoryDatabase();
-        var context = db.CreateDataContext<EFDataContext>();
-        var readContext = db.CreateDataContext<EFDataContext>();
         //arrange
-        var doctor = new Doctor
-        {
-            FirstName = "dummy-first-name",
-            LastName = "dummy-last-name",
-            Field = "heart",
-            NationalCode = "4645774"
-
-        };
-        context.Save(doctor);
-        var sut = new DoctorAppService(new EFDoctorRepository(context), new EFUnitOfWork(context));
+        var doctor = new DoctorBuilder()
+            .Build();
+        _context.Save(doctor);
         var updateDto = new UpdateDoctorDto
         {
             FirstName = "updated-dummy-first-name",
@@ -66,10 +58,10 @@ public class DoctorServiceTests
         };
 
         //act
-        await sut.Update(doctor.Id, updateDto);
+        await _sut.Update(doctor.Id, updateDto);
 
         //assert
-        var actual = readContext.Doctors.First(_ => _.Id == doctor.Id);
+        var actual = _readContext.Doctors.First(_ => _.Id == doctor.Id);
         actual.FirstName.Should().Be(updateDto.FirstName);
         actual.LastName.Should().Be(updateDto.LastName);
         actual.Field.Should().Be(updateDto.Field);
@@ -78,12 +70,7 @@ public class DoctorServiceTests
     [Fact]
     public async Task Update_throws_exeption_when_doctors_id_not_found()
     {
-        var id = 8;
-        var db = new EFInMemoryDatabase();
-        var context = db.CreateDataContext<EFDataContext>();
-        var readContext = db.CreateDataContext<EFDataContext>();
-
-        var sut = new DoctorAppService(new EFDoctorRepository(context), new EFUnitOfWork(context));
+        var dummyid = 8;
         var updateDto = new UpdateDoctorDto
         {
             FirstName = "updated-dummy-first-name",
@@ -93,7 +80,7 @@ public class DoctorServiceTests
 
         };
 
-        var actual = () => sut.Update(id, updateDto);
+        var actual = () => _sut.Update(dummyid, updateDto);
 
         await actual.Should().ThrowExactlyAsync<DoctorIdNotFound>();
 
@@ -101,28 +88,13 @@ public class DoctorServiceTests
     [Fact]
     public async Task Add_throws_exeption_when_doctors_have_same_nationalcode()
     {
-        var dto = new AddDoctorDto
-        {
-            FirstName = "dummy-first-name",
-            LastName = "dummy-last-name",
-            Field = "heart",
-            NationalCode = "3545345"
+        var doctor = new DoctorBuilder()
+            .WithNationalCode("3545345")
+            .Build();
+        _context.Save(doctor);
+        var dto2 = AddDoctorDtoFactory.Create("3545345");
 
-        };
-        var db = new EFInMemoryDatabase();
-        var context = db.CreateDataContext<EFDataContext>();
-        var readContext = db.CreateDataContext<EFDataContext>();
-        var sut = new DoctorAppService(new EFDoctorRepository(context), new EFUnitOfWork(context));
-        await sut.Add(dto);
-        var dto2 = new AddDoctorDto
-        {
-            FirstName = "sdfadf",
-            LastName = "afadg",
-            Field = "deffe",
-            NationalCode = "3545345"
-        };
-
-        var actual = () => sut.Add(dto2);
+        var actual = () => _sut.Add(dto2);
 
         await actual.Should().ThrowExactlyAsync<DoctorsCannotHaveSameNationalCode>();
 
@@ -130,98 +102,59 @@ public class DoctorServiceTests
     [Fact]
     public void Get_gets_count_of_doctors_properly()
     {
-        var dto = new AddDoctorDto
-        {
-            FirstName = "adfvsdv",
-            LastName = "sgvsrg",
-            Field = "public",
-            NationalCode = "3545345003"
-
-        };
-        var dto2 = new AddDoctorDto
-        {
-            FirstName = "sdgadfvsdv",
-            LastName = "sgvsasegfrg",
-            Field = "public33",
-            NationalCode = "3sge545345003"
-
-        };
-        var db = new EFInMemoryDatabase();
-        var context = db.CreateDataContext<EFDataContext>();
-        var readContext = db.CreateDataContext<EFDataContext>();
-        var sut = new DoctorAppService(new EFDoctorRepository(context), new EFUnitOfWork(context));
+        var doctor1 = new DoctorBuilder()
+            .Build();
+        var doctor2 = new DoctorBuilder()
+            .WithNationalCode("21542624")
+            .Build();
         var exepted = 2;
+        _context.Save(doctor1);
+        _context.Save(doctor2);
 
-        _ = sut.Add(dto);
-        sut.Add(dto2);
+        var actual = _sut.GetDoctors().Count;
 
-        var actual = readContext.Doctors.Count();
         actual.Should().Be(exepted);
 
     }
     [Fact]
     public void Get_gets_information_of_doctors_properly()
     {
-      
-      
-        var dto = new AddDoctorDto
-        {
-            FirstName = "mehdi",
-            LastName = "ahmadi",
-            Field = "heart",
-            NationalCode = "1234"
-        };
-       
-        var db = new EFInMemoryDatabase();
-        var context = db.CreateDataContext<EFDataContext>();
-        var readContext = db.CreateDataContext<EFDataContext>();
-        var sut = new DoctorAppService(new EFDoctorRepository(context), new EFUnitOfWork(context));
-        
-
-        
-        sut.Add(dto);
 
 
-        var actual = readContext.Doctors.First();
-        actual.FirstName.Equals(dto.FirstName);
-        actual.LastName.Equals(dto.LastName);
-        actual.Field.Equals(dto.Field);
-        actual.NationalCode.Equals(dto.NationalCode);
-        
+        var doctor = new DoctorBuilder()
+            .WithFirstName("oso")
+            .Build();
+        _context.Save(doctor);
+
+        var actual = _sut.GetDoctors().Single();
+
+
+        actual.FirstName.Equals(doctor.FirstName);
+        actual.LastName.Equals(doctor.LastName);
+        actual.Field.Equals(doctor.Field);
+        actual.NationalCode.Equals(doctor.NationalCode);
+
     }
     [Fact]
     public void Delete_delete_doctor_from_table_doctors_properly()
     {
-        var db = new EFInMemoryDatabase();
-        var context = db.CreateDataContext<EFDataContext>();
-        var readContext = db.CreateDataContext<EFDataContext>();
-        var sut = new DoctorAppService(new EFDoctorRepository(context), new EFUnitOfWork(context));
         var expected = false;
-        var doctor = new Doctor
-        {
-            FirstName = "efsegs",
-            LastName = "adgwrh",
-            Field = "heart",
-            NationalCode = "344436545345"
+        var doctor = new DoctorBuilder()
+            .WithFirstName("ssss")
+            .Build();
+        _context.Save(doctor);
 
-        };
-        context.Save(doctor);
+        _sut.Delete(doctor.Id);
 
-        _ = sut.Delete(doctor.Id);
-
-        var actual = readContext.Doctors.Any(_ => _.Id == doctor.Id);
+        var actual = _readContext.Doctors.Any(_ => _.Id == doctor.Id);
         actual.Should().Be(expected);
     }
     [Fact]
     public async Task Delete_throws_exeption_when_doctorid_not_found()
     {
-        var id = 8;
-        var db = new EFInMemoryDatabase();
-        var context = db.CreateDataContext<EFDataContext>();
-        var readContext = db.CreateDataContext<EFDataContext>();
-        var sut = new DoctorAppService(new EFDoctorRepository(context), new EFUnitOfWork(context));
+        var dummyid = 8;
 
-        var actual = () => sut.Delete(id);
+        var actual = () => _sut.Delete(dummyid);
 
         await actual.Should().ThrowExactlyAsync<DoctorIdNotFound>();
 
