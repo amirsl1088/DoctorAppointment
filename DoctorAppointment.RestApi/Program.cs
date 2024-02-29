@@ -1,4 +1,9 @@
+using DoctorAppointment.Contracts.Interfaces;
 using DoctorAppointment.Persistence.EF;
+using DoctorAppointment.Persistence.EF.Doctors;
+using DoctorAppointment.Services.Doctors;
+using DoctorAppointment.Services.Doctors.Contracts;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 

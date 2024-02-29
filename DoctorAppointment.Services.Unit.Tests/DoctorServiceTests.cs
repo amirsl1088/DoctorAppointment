@@ -100,7 +100,7 @@ public class DoctorServiceTests
 
     }
     [Fact]
-    public void Get_gets_count_of_doctors_properly()
+    public async void Get_gets_count_of_doctors_properly()
     {
         var doctor1 = new DoctorBuilder()
             .Build();
@@ -111,13 +111,13 @@ public class DoctorServiceTests
         _context.Save(doctor1);
         _context.Save(doctor2);
 
-        var actual = _sut.GetDoctors().Count;
+        var actual = await _sut.GetDoctors();
 
-        actual.Should().Be(exepted);
+        actual.Count().Should().Be(exepted);
 
     }
     [Fact]
-    public void Get_gets_information_of_doctors_properly()
+    public async Task Get_gets_information_of_doctors_properly()
     {
 
 
@@ -126,14 +126,13 @@ public class DoctorServiceTests
             .Build();
         _context.Save(doctor);
 
-        var actual = _sut.GetDoctors().Single();
+        var actual = await _sut.GetDoctors();
 
-
-        actual.FirstName.Equals(doctor.FirstName);
-        actual.LastName.Equals(doctor.LastName);
-        actual.Field.Equals(doctor.Field);
-        actual.NationalCode.Equals(doctor.NationalCode);
-
+        actual.First().NationalCode.Should().Be(doctor.NationalCode);
+        actual.First().Id.Should().Be(doctor.Id);
+        actual.First().LastName.Should().Be(doctor.LastName);
+        actual.First().Field.Should().Be(doctor.Field);
+        actual.First().FirstName.Should().Be(doctor.FirstName);
     }
     [Fact]
     public void Delete_delete_doctor_from_table_doctors_properly()

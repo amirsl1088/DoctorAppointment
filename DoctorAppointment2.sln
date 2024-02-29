@@ -15,17 +15,21 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02.Infrastructure", "02.Inf
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03.Presentation", "03.Presentation", "{0BE99069-5878-4614-8F30-29F40D194634}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DoctorAppointment.Contracts", "DoctorAppointment.Contracts\DoctorAppointment.Contracts.csproj", "{3062ADF8-B05D-44B0-9521-98348F0C2FB9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DoctorAppointment.Contracts", "DoctorAppointment.Contracts\DoctorAppointment.Contracts.csproj", "{3062ADF8-B05D-44B0-9521-98348F0C2FB9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DoctorAppointment.Entities", "DoctorAppointment.Entities\DoctorAppointment.Entities.csproj", "{80118478-236C-4200-8788-D93B62B9167B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DoctorAppointment.Entities", "DoctorAppointment.Entities\DoctorAppointment.Entities.csproj", "{80118478-236C-4200-8788-D93B62B9167B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DoctorAppointment.Services", "DoctorAppointment.Services\DoctorAppointment.Services.csproj", "{7ECF3D2E-BE89-4E70-9F5F-25DE9D40B360}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DoctorAppointment.Services", "DoctorAppointment.Services\DoctorAppointment.Services.csproj", "{7ECF3D2E-BE89-4E70-9F5F-25DE9D40B360}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DoctorAppointment.Persistence.EF", "DoctorAppointment.Persistence.EF\DoctorAppointment.Persistence.EF.csproj", "{5B337FDB-4BA1-43CD-B9F5-2E79CF05632D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DoctorAppointment.Persistence.EF", "DoctorAppointment.Persistence.EF\DoctorAppointment.Persistence.EF.csproj", "{5B337FDB-4BA1-43CD-B9F5-2E79CF05632D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DoctorAppointment.Services.Unit.Tests", "DoctorAppointment.Services.Unit.Tests\DoctorAppointment.Services.Unit.Tests.csproj", "{24ACC8E2-C9E2-4622-A619-9DCAB9436E1B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DoctorAppointment.Services.Unit.Tests", "DoctorAppointment.Services.Unit.Tests\DoctorAppointment.Services.Unit.Tests.csproj", "{24ACC8E2-C9E2-4622-A619-9DCAB9436E1B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DoctorAppointment.Test.Tools", "DoctorAppointment.Test.Tools\DoctorAppointment.Test.Tools.csproj", "{B8E60826-FAFF-4E01-A879-4E0936E89A1B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DoctorAppointment.Test.Tools", "DoctorAppointment.Test.Tools\DoctorAppointment.Test.Tools.csproj", "{B8E60826-FAFF-4E01-A879-4E0936E89A1B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DoctorAppointment.Migrations", "DoctorAppointment.Migrations\DoctorAppointment.Migrations.csproj", "{0413580B-0D6D-4826-9CDF-7D641FACEFBF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DoctorAppointment.RestApi", "DoctorAppointment.RestApi\DoctorAppointment.RestApi.csproj", "{642E2CA0-CD5E-46F9-B017-92C25FEF855C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,6 +61,14 @@ Global
 		{B8E60826-FAFF-4E01-A879-4E0936E89A1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B8E60826-FAFF-4E01-A879-4E0936E89A1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B8E60826-FAFF-4E01-A879-4E0936E89A1B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0413580B-0D6D-4826-9CDF-7D641FACEFBF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0413580B-0D6D-4826-9CDF-7D641FACEFBF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0413580B-0D6D-4826-9CDF-7D641FACEFBF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0413580B-0D6D-4826-9CDF-7D641FACEFBF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{642E2CA0-CD5E-46F9-B017-92C25FEF855C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{642E2CA0-CD5E-46F9-B017-92C25FEF855C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{642E2CA0-CD5E-46F9-B017-92C25FEF855C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{642E2CA0-CD5E-46F9-B017-92C25FEF855C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -72,6 +84,8 @@ Global
 		{5B337FDB-4BA1-43CD-B9F5-2E79CF05632D} = {553ED138-E618-4830-84B4-672BB6BA2264}
 		{24ACC8E2-C9E2-4622-A619-9DCAB9436E1B} = {A3C776E4-C53D-4958-9E21-26D1429B0173}
 		{B8E60826-FAFF-4E01-A879-4E0936E89A1B} = {A3C776E4-C53D-4958-9E21-26D1429B0173}
+		{0413580B-0D6D-4826-9CDF-7D641FACEFBF} = {553ED138-E618-4830-84B4-672BB6BA2264}
+		{642E2CA0-CD5E-46F9-B017-92C25FEF855C} = {0BE99069-5878-4614-8F30-29F40D194634}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F8E5E5B4-96EC-4A02-B42C-EDB8F9C247D7}

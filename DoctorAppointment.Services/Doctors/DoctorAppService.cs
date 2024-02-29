@@ -26,17 +26,15 @@ public class DoctorAppService : DoctorService
             FirstName = dto.FirstName,
             LastName = dto.LastName,
             Field = dto.Field,
-            NationalCode=dto.NationalCode
+            NationalCode = dto.NationalCode
         };
-        var result = _repository.IsExistNationalCode(dto.NationalCode);
-        if (result is true)
-        {
-            throw new DoctorsCannotHaveSameNationalCode();
-        }
+
+        ThrowExceptionWhenDoctorNotExist(dto);
 
         _repository.Add(doctor);
         await _unitOfWork.Complete();
     }
+
 
     public async Task Delete(int id)
     {
@@ -49,11 +47,10 @@ public class DoctorAppService : DoctorService
         await _unitOfWork.Complete();
     }
 
-    public List<GetDoctorDto> GetDoctors()
+    public async Task<List<GetDoctorDto>> GetDoctors()
     {
-        var doctors = _repository.GetDoctors();
+        return await _repository.GetDoctors();
         
-        return doctors;
     }
 
     public async Task Update(int id, UpdateDoctorDto dto)
@@ -71,6 +68,14 @@ public class DoctorAppService : DoctorService
        
 
         await _unitOfWork.Complete();
+    }
+    private void ThrowExceptionWhenDoctorNotExist(AddDoctorDto dto)
+    {
+        var result = _repository.IsExistNationalCode(dto.NationalCode);
+        if (result is true)
+        {
+            throw new DoctorsCannotHaveSameNationalCode();
+        }
     }
 
     

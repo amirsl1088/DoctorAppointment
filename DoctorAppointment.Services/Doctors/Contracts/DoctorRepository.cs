@@ -8,6 +8,6 @@ public interface DoctorRepository
     void Add(Doctor doctor);
     Task<Doctor?> FindById(int id);
     bool IsExistNationalCode( string nationalcode);
-    List<GetDoctorDto> GetDoctors();
+    Task<List<GetDoctorDto>> GetDoctors();
     void Delete(Doctor doctor);
 }

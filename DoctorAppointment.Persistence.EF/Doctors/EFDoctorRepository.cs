@@ -30,7 +30,7 @@ public class EFDoctorRepository : DoctorRepository
         return await _context.Doctors.FirstOrDefaultAsync(_ => _.Id == id);
     }
 
-    public List<GetDoctorDto> GetDoctors()
+    public async Task<List<GetDoctorDto>> GetDoctors()
     {
         return _context.Doctors.Select(_ => new GetDoctorDto
         {
