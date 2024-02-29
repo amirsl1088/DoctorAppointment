@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DoctorAppointment.Migrations
+namespace DoctorAppointment.Migrations.Patients
 {
     [Migration(202402291944)]
     public class _202402291944_AddedPatientsTable : Migration

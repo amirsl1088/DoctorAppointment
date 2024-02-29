@@ -47,10 +47,10 @@ namespace DoctorAppointment.Services.Patients
             await _unitOfWork.Complete();
         }
 
-        public List<GetPatientDto> GetPatients()
+        public async Task<List<GetPatientDto>> GetPatients()
         {
-            var patients = _repository.GetPatients();
-            return patients;
+            return await _repository.GetPatients();
+           
         }
 
         public async Task Update(int id, UpdatePatientDto updatedto)

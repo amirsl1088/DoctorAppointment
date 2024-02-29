@@ -31,7 +31,7 @@ namespace DoctorAppointment.Services.Unit.Tests
           return  await _context.Patients.FirstOrDefaultAsync(_ => _.Id == id);
         }
 
-        public List<GetPatientDto> GetPatients()
+        public async Task<List<GetPatientDto>> GetPatients()
         {
             return _context.Patients.Select(_ => new GetPatientDto
             {

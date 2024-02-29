@@ -3,6 +3,9 @@ using DoctorAppointment.Persistence.EF;
 using DoctorAppointment.Persistence.EF.Doctors;
 using DoctorAppointment.Services.Doctors;
 using DoctorAppointment.Services.Doctors.Contracts;
+using DoctorAppointment.Services.Patients;
+using DoctorAppointment.Services.Patients.Contracts;
+using DoctorAppointment.Services.Unit.Tests;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -21,6 +24,8 @@ builder.Services.AddDbContext<EFDataContext>(
 builder.Services.AddScoped<UnitOfWork, EFUnitOfWork>();
 builder.Services.AddScoped<DoctorService, DoctorAppService>();
 builder.Services.AddScoped<DoctorRepository, EFDoctorRepository>();
+builder.Services.AddScoped<PatientService, PatientAppService>();
+builder.Services.AddScoped<PatientRepository, EFPatientRepository>();
 
 var app = builder.Build();
 

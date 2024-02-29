@@ -15,7 +15,7 @@ namespace DoctorAppointment.Services.Patients.Contracts
         bool IsExistNationalCode(string nationalcode);
         Task<Patient?> FindById(int id);
         void Update();
-        List<GetPatientDto> GetPatients();
+        Task<List<GetPatientDto>> GetPatients();
         void Delete(Patient patient);
 
 
