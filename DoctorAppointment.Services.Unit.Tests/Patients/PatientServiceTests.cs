@@ -19,7 +19,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DoctorAppointment.Services.Unit.Tests
+namespace DoctorAppointment.Services.Unit.Tests.Patients
 {
     public class PatientServiceTests
     {
@@ -95,7 +95,7 @@ namespace DoctorAppointment.Services.Unit.Tests
             await actual.Should().ThrowExactlyAsync<PatientNotFound>();
         }
         [Fact]
-        public void Get_gets_count_of_patients_properly()
+        public async Task Get_gets_count_of_patients_properly()
         {
             var patient = new PatientBuilder().Build();
             var patient2 = new PatientBuilder().Build();
@@ -103,21 +103,21 @@ namespace DoctorAppointment.Services.Unit.Tests
             _context.Save(patient);
             _context.Save(patient2);
 
-            var actual = _sut.GetPatients().Count;
+            var actual =await _sut.GetPatients();
 
-            actual.Should().Be(expected);
+            actual.Count().Should().Be(expected);
         }
         [Fact]
-        public void Get_gets_imformation_of_patients_properly()
+        public async Task Get_gets_imformation_of_patients_properly()
         {
             var patient = new PatientBuilder().Build();
             _context.Save(patient);
 
-            var actual = _sut.GetPatients().Single();
+            var actual =await _sut.GetPatients();
 
-            actual.FirstName.Should().Be(patient.FirstName);
-            actual.LastName.Should().Be(patient.LastName);
-            actual.NationalCode.Should().Be(patient.NationalCode);
+            actual.First().FirstName.Should().Be(patient.FirstName);
+            actual.First().LastName.Should().Be(patient.LastName);
+            actual.First().NationalCode.Should().Be(patient.NationalCode);
 
 
         }

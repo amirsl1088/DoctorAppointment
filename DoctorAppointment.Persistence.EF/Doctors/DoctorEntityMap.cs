@@ -8,6 +8,8 @@ public class DoctorEntityMap : IEntityTypeConfiguration<Doctor>
 {
     public void Configure(EntityTypeBuilder<Doctor> builder)
     {
+       
+
         builder.HasKey(_ => _.Id);
         builder.Property(_ => _.Id).ValueGeneratedOnAdd();
         builder.Property(_ => _.FirstName).IsRequired();

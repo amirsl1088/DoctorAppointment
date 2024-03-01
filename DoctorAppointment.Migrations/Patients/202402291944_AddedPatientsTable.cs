@@ -18,6 +18,7 @@ namespace DoctorAppointment.Migrations.Patients
                 .WithColumn("FirstName").AsString(50).NotNullable()
                 .WithColumn("LastName").AsString(50).NotNullable()
                 .WithColumn("NationalCode").AsString(25).NotNullable();
+                
         }
         public override void Down()
         {

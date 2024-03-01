@@ -9,7 +9,7 @@ using DoctorAppointment.Test.Tools.Doctors;
 using DoctorAppointment.Test.Tools.Infrastructure.DatabaseConfig.Unit;
 using FluentAssertions;
 
-namespace DoctorAppointment.Services.Unit.Tests;
+namespace DoctorAppointment.Services.Unit.Tests.Doctors;
 
 public class DoctorServiceTests
 {

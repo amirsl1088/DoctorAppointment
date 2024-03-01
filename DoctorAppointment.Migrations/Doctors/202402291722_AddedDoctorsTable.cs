@@ -13,6 +13,7 @@ namespace DoctorAppointment.Migrations.Doctors
 
         public override void Up()
         {
+
             Create.Table("Doctors")
                  .WithColumn("Id").AsInt32().PrimaryKey().Identity()
                  .WithColumn("FirstName").AsString(50).NotNullable()
