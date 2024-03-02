@@ -6,6 +6,7 @@ using DoctorAppointment.Services.Doctors.Contracts;
 using DoctorAppointment.Services.Patients;
 using DoctorAppointment.Services.Patients.Contracts;
 using DoctorAppointment.Services.Unit.Tests;
+using DoctorAppointment.Services.Unit.Tests.Receipts;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -26,6 +27,8 @@ builder.Services.AddScoped<DoctorService, DoctorAppService>();
 builder.Services.AddScoped<DoctorRepository, EFDoctorRepository>();
 builder.Services.AddScoped<PatientService, PatientAppService>();
 builder.Services.AddScoped<PatientRepository, EFPatientRepository>();
+builder.Services.AddScoped<ReceiptService, ReceiptAppService>();
+builder.Services.AddScoped<ReceiptRepository, EFReceiptRepository>();
 
 var app = builder.Build();
 
