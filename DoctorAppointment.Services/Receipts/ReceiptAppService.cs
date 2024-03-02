@@ -1,5 +1,6 @@
 ﻿using DoctorAppointment.Contracts.Interfaces;
 using DoctorAppointment.Entities.Receipts;
+using DoctorAppointment.Services.Receipts.Contracts.Dto;
 using DoctorAppointment.Services.Receipts.Exceptions;
 
 namespace DoctorAppointment.Services.Unit.Tests.Receipts
@@ -18,8 +19,8 @@ namespace DoctorAppointment.Services.Unit.Tests.Receipts
 
         public async Task Add(AddReceiptDto dto)
         {
-            var doctor = _repository.FindDoctorById(dto.DoctorId);
-            var patient = _repository.FindPatientById(dto.PatientId);
+            var doctor = await _repository.FindDoctorById(dto.DoctorId);
+            var patient = await _repository.FindPatientById(dto.PatientId);
             
             if(doctor == null)
             {
@@ -37,16 +38,48 @@ namespace DoctorAppointment.Services.Unit.Tests.Receipts
                 PatientId = patient.Id,
                 ReserveDate = dto.ReserveDate
             };
-            var result = _repository.FindDoctorReceipt(doctor.Id).Result;
-            var count = result.Count();
-            if (count>5)
+            var result = _repository.CountOfReceipts();
+            
+            if (result > 5)
             {
                 throw new DoctorCannotVisitMoreThanFivePatientsException();
             }
-            
-           
+            if (dto.ReserveDate < DateTime.UtcNow)
+            {
+                throw new DateTimePassedException();
+            }
+
+
             _repository.Add(receipt);
             await _unitOfWork.Complete();
+        }
+
+        public async Task Delete(int id)
+        {
+            var receipt = await _repository.FindReceiptById(id);
+            if(receipt is null)
+            {
+                throw new ReceiptIdNotFoundException();
+            }
+            _repository.Delete(receipt);
+            await _unitOfWork.Complete();
+        }
+
+        public async Task<List<GetReceiptDto>> GetAll()
+        {
+          return await  _repository.GetAll();
+        }
+
+        public async Task Update(int id,UpdateReceiptDto dto)
+        {
+            var receipt = await _repository.FindReceiptById(id);
+            if (receipt == null)
+            {
+                throw new ReceiptIdNotFoundException();
+            }
+            receipt.ReserveDate = dto.ReserveDate;
+            await _unitOfWork.Complete();
+
         }
     }
 }

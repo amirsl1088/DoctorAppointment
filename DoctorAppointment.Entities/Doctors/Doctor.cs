@@ -14,5 +14,5 @@ public class Doctor
     public string LastName { get; set; }
     public string Field { get; set; }
     public string NationalCode { get; set; }
-    public List<Receipt> Receipts { get; set; }
+    public List<Receipt>? Receipts { get; set; }
 }

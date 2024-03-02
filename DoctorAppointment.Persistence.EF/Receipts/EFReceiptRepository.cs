@@ -1,5 +1,8 @@
-﻿using DoctorAppointment.Entities.Receipts;
+﻿using DoctorAppointment.Entities.Doctors;
+using DoctorAppointment.Entities.Patients;
+using DoctorAppointment.Entities.Receipts;
 using DoctorAppointment.Persistence.EF;
+using DoctorAppointment.Services.Receipts.Contracts.Dto;
 using Microsoft.EntityFrameworkCore;
 
 namespace DoctorAppointment.Services.Unit.Tests.Receipts
@@ -11,6 +14,7 @@ namespace DoctorAppointment.Services.Unit.Tests.Receipts
         public EFReceiptRepository(EFDataContext context)
         {
             _context = context;
+            
         }
 
         public void Add(Receipt receipt)
@@ -18,21 +22,51 @@ namespace DoctorAppointment.Services.Unit.Tests.Receipts
             _context.Receipts.Add(receipt);
         }
 
-        public async Task FindDoctorById(int id)
+        public int CountOfReceipts()
         {
-            await _context.Doctors.FirstOrDefaultAsync(_ => _.Id == id);
+            return _context.Receipts.Count();
         }
 
-        public async Task<List<Receipt>> FindDoctorReceipt(int id)
+        public void Delete(Receipt receipt)
         {
-            var doctor =await _context.Doctors.FirstOrDefaultAsync(_ => _.Id == id);
-           
-            return  doctor.Receipts;
+            _context.Receipts.Remove(receipt);
         }
 
-        public async Task FindPatientById(int id)
+        public async Task<Doctor?> FindDoctorById(int id)
         {
-            await _context.Patients.FirstOrDefaultAsync(_ => _.Id == id);
+            return await _context.Doctors.FirstOrDefaultAsync(_ => _.Id == id);
         }
+
+        public async Task<List<Receipt>?> FindDoctorReceipt(int id)
+        {
+           return await _context.Receipts.Where(_ => _.DoctorId == id).ToListAsync();
+
+            
+            
+        }
+
+
+        public async Task<Patient?> FindPatientById(int id)
+        {
+          return  await _context.Patients.FirstOrDefaultAsync(_ => _.Id == id);
+        }
+
+        public async Task<Receipt?> FindReceiptById(int id)
+        {
+            return await _context.Receipts.FirstOrDefaultAsync(_ => _.Id == id);
+        }
+
+        public async Task<List<GetReceiptDto>> GetAll()
+        {
+            return  _context.Receipts.Select(_ => new GetReceiptDto
+            {
+                Id = _.Id,
+                DoctorId = _.DoctorId,
+                PatientId = _.PatientId,
+                ReserveDate = _.ReserveDate
+            }).ToList();
+        }
+
+       
     }
 }
