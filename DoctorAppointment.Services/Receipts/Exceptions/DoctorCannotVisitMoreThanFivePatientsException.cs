@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DoctorAppointment.Services.Receipts.Exceptions
 {
-    public class DoctorNameNotFound:Exception
+    public class DoctorCannotVisitMoreThanFivePatientsException:Exception
     {
     }
 }

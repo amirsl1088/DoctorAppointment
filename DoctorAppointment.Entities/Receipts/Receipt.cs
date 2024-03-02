@@ -11,10 +11,8 @@ namespace DoctorAppointment.Entities.Receipts
     public class Receipt
     {
         public int Id { get; set; }
-        public Doctor Doctor { get; set; }
-        public Patient Patient { get; set; }
-        public string DoctorName { get; set; }
-        public string PatientName { get; set; }
+        public Doctor? Doctor { get; set; }
+        public Patient? Patient { get; set; }
         public DateTime ReserveDate { get; set; }
         public int DoctorId { get; set; }
         public int PatientId { get; set; }

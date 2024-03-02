@@ -35,11 +35,10 @@ namespace DoctorAppointment.Services.Unit.Tests.Receipts
                 .Build();
             var dto = new AddReceiptDto
             {
-                PatientName = "dagfsb",
-                DoctorName = "ewgwgwrg",
-                ReserveDate = DateTime.Now,
+
+                ReserveDate = DateTime.UtcNow,
                 DoctorId = doctor.Id,
-                PatientId=patient.Id
+                PatientId = patient.Id
             };
             _context.Save(doctor);
             _context.Save(patient);
@@ -47,11 +46,9 @@ namespace DoctorAppointment.Services.Unit.Tests.Receipts
             await _sut.Add(dto);
 
             var actual = _readContext.Receipts.Single();
-            actual.PatientName.Should().Be(dto.PatientName);
-            actual.DoctorName.Should().Be(dto.DoctorName);
             actual.ReserveDate.Should().Be(dto.ReserveDate);
-            actual.DoctorId.Should().Be(dto.DoctorId);
-            actual.PatientId.Should().Be(dto.PatientId);
+            actual.DoctorId.Should().Be(doctor.Id);
+            actual.PatientId.Should().Be(patient.Id);
         }
     }
 }

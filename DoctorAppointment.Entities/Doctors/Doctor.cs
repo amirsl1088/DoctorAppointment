@@ -5,6 +5,10 @@ namespace DoctorAppointment.Entities.Doctors;
 
 public class Doctor
 {
+    public Doctor()
+    {
+        Receipts = new List<Receipt>();
+    }
     public int Id { get; set; }
     public string FirstName { get; set; }
     public string LastName { get; set; }

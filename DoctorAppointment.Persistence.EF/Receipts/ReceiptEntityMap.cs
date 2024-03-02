@@ -19,8 +19,7 @@ namespace DoctorAppointment.Persistence.EF.Receipts
                 .WithMany(_ => _.Receipts);
             builder.HasKey(_ => _.Id);
             builder.Property(_ => _.Id).ValueGeneratedOnAdd();
-            builder.Property(_ => _.DoctorName).IsRequired();
-            builder.Property(_ => _.PatientName).IsRequired();
+            builder.Property(_ => _.ReserveDate).IsRequired();
         }
     }
 }

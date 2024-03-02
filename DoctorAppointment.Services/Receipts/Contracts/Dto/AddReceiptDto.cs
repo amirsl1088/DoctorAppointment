@@ -1,11 +1,16 @@
-﻿namespace DoctorAppointment.Services.Unit.Tests.Receipts
+﻿using System.ComponentModel.DataAnnotations.Schema;
+
+namespace DoctorAppointment.Services.Unit.Tests.Receipts
 {
     public class AddReceiptDto
     {
-        public string PatientName { get; set; }
-        public string DoctorName { get; set; }
+        
+        
+       
         public DateTime ReserveDate { get; set; }
+        [ForeignKey("DoctorId")]
         public int DoctorId { get; set; }
+        [ForeignKey("PatientId")]
         public int PatientId { get; set; }
     }
 }

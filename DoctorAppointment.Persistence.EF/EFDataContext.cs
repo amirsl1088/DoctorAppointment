@@ -25,5 +25,13 @@ public class EFDataContext : DbContext
         base.OnModelCreating(modelBuilder);
         modelBuilder.ApplyConfigurationsFromAssembly
             (typeof(EFDataContext).Assembly);
+        modelBuilder.Entity<Receipt>()
+            .HasOne(_ => _.Doctor)
+            .WithMany(_ => _.Receipts)
+            .HasForeignKey(_ => _.DoctorId);
+        modelBuilder.Entity<Receipt>()
+            .HasOne(_ => _.Patient)
+            .WithMany(_ => _.Receipts)
+            .HasForeignKey(_ => _.PatientId);
     }
 }

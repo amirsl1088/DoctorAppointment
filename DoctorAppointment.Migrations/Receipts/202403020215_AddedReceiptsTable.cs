@@ -14,8 +14,6 @@ namespace DoctorAppointment.Migrations.Receipts
         {
             Create.Table("Receipts")
                 .WithColumn("Id").AsInt32().PrimaryKey().Identity()
-                .WithColumn("DoctorName").AsString(50).NotNullable()
-                .WithColumn("PatientName").AsString(50).NotNullable()
                 .WithColumn("ReserveDate").AsDateTime().NotNullable()
                 .WithColumn("DoctorId").AsInt32().ForeignKey("FK_Receipts_Doctors", "Doctors", "Id")
                 .WithColumn("PatientId").AsInt32().ForeignKey("FK_Receipts_Patients", "Patients", "Id");

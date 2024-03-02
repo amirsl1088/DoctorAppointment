@@ -18,30 +18,33 @@ namespace DoctorAppointment.Services.Unit.Tests.Receipts
 
         public async Task Add(AddReceiptDto dto)
         {
+            var doctor = _repository.FindDoctorById(dto.DoctorId);
+            var patient = _repository.FindPatientById(dto.PatientId);
+            
+            if(doctor == null)
+            {
+                throw new DoctorIdNotFoundException();
+            }
+            
+            if (patient ==null)
+            {
+                throw new PatientIdNotFoundException();
+            }
+           
             var receipt = new Receipt
             {
-                DoctorName = dto.DoctorName,
-                PatientName = dto.PatientName,
-                ReserveDate = dto.ReserveDate,
-                DoctorId = dto.DoctorId,
-                PatientId = dto.PatientId
+                DoctorId = doctor.Id,
+                PatientId = patient.Id,
+                ReserveDate = dto.ReserveDate
             };
-            var result = _repository.IsExistDoctor(dto.DoctorName);
-            if (result == false)
+            var result = _repository.FindDoctorReceipt(doctor.Id).Result;
+            var count = result.Count();
+            if (count>5)
             {
-                throw new DoctorNameNotFound();
+                throw new DoctorCannotVisitMoreThanFivePatientsException();
             }
-            var result2 = _repository.IsExistPatient(dto.PatientName);
-            if (result2 == false)
-            {
-                throw new PatientNameNotFound();
-            }
-            //var count = receipt.Doctor.Receipts.Count();
-            //if (count > 5)
-            //{
-            //    throw new DoctorCannotVisitMoreThanFivePatients();
-            //}
-            //receipt.Doctor.Receipts.Add(receipt);
+            
+           
             _repository.Add(receipt);
             await _unitOfWork.Complete();
         }

@@ -1,5 +1,6 @@
 ﻿using DoctorAppointment.Entities.Receipts;
 using DoctorAppointment.Persistence.EF;
+using Microsoft.EntityFrameworkCore;
 
 namespace DoctorAppointment.Services.Unit.Tests.Receipts
 {
@@ -17,16 +18,21 @@ namespace DoctorAppointment.Services.Unit.Tests.Receipts
             _context.Receipts.Add(receipt);
         }
 
-        
-
-        public bool IsExistDoctor(string doctorName)
+        public async Task FindDoctorById(int id)
         {
-            return _context.Doctors.Any(_ => _.FirstName == doctorName);
+            await _context.Doctors.FirstOrDefaultAsync(_ => _.Id == id);
         }
 
-        public bool IsExistPatient(string patientName)
+        public async Task<List<Receipt>> FindDoctorReceipt(int id)
         {
-            return _context.Patients.Any(_ => _.FirstName == patientName);
+            var doctor =await _context.Doctors.FirstOrDefaultAsync(_ => _.Id == id);
+           
+            return  doctor.Receipts;
+        }
+
+        public async Task FindPatientById(int id)
+        {
+            await _context.Patients.FirstOrDefaultAsync(_ => _.Id == id);
         }
     }
 }
